@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback } from 'react'
+import React, { useState, useEffect, useCallback } from 'react'
 import type { Dish } from '../../types'
 import { IMAGE_PATHS, ING_EMOJI, buildIngredientPool } from '../../data/gameData'
 import CeramicBowl from '../ui/CeramicBowl'
@@ -52,7 +52,7 @@ export default function GameplayScreen({
     <div className="fixed inset-0 w-full h-full flex flex-col items-center bg-stone-50 overflow-hidden">
       {/* 1. NỀN TOÀN MÀN HÌNH */}
       <img 
-        src="/images/ui/gameplay.png" 
+        src="public/" 
         className="absolute inset-0 w-full h-full object-fill z-0" 
         alt="background"
       />

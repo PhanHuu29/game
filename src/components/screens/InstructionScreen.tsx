@@ -14,7 +14,7 @@ export default function InstructionScreen({ onStart }: Props) {
     <div className="screen gap-7 px-6">
       {/* 1. ẢNH NỀN TOÀN MÀN HÌNH */}
       <img
-        src="/images/ui/mission.png"
+        src="/public/images/ui/mission.png"        
         className="absolute inset-0 w-full h-full object-fill z-0"
         alt="background"
       />
@@ -69,7 +69,7 @@ export default function InstructionScreen({ onStart }: Props) {
         </div>
 
         <img
-          src="/images/ui/start.png"
+          src="/public/images/nút bắt đầu.png"
           alt="Bắt đầu"
           className="
             w-[85vw] md:w-[480px] h-auto object-contain z-10

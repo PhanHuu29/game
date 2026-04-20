@@ -22,7 +22,7 @@ export default function StartScreen({ onStart }: Props) {
   
       {/* 1. ẢNH NỀN (BACKGROUND) */}
       <img 
-        src="/images/ui/background.png" 
+        src="/public/images/ui/background.png" 
         className="absolute inset-0 w-full h-full object-fill z-0" 
         alt="background"
       />
@@ -61,7 +61,7 @@ export default function StartScreen({ onStart }: Props) {
         </div>
 
         <img 
-          src="/images/ui/start.png" 
+          src="/public/images/nút bắt đầu.png" 
           alt="Bắt đầu" 
           className="
             w-[85vw] md:w-[480px] h-auto object-contain z-10
