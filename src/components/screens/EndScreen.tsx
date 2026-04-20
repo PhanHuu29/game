@@ -95,7 +95,7 @@ export default function EndScreen({ onRestart, playVictory }: Props) {
       </div>
 
       <p
-        className="font-body text-brown-dark italic text-center z-20 animate-fade-in"
+        className="font-body text-brown-dark italic text-center z-20 animate-fade-in text-white"
         style={{ fontSize: 13, maxWidth: 340, animationDelay: '1s' }}
       >
         Mâm cỗ Bát Tràng đã hoàn thiện với 6 món ăn truyền thống tuyệt vời!
