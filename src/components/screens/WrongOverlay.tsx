@@ -47,7 +47,7 @@ export default function WrongOverlay({ onRetry, playWrong }: Props) {
           className="leading-none select-none"
           style={{ fontSize: 68, marginBottom: 16, animation: 'shakeX 0.65s ease both' }}
         >
-          😔
+          
         </div>
 
         <h3

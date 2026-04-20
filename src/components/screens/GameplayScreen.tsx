@@ -52,7 +52,7 @@ export default function GameplayScreen({
     <div className="fixed inset-0 w-full h-full flex flex-col items-center bg-stone-50 overflow-hidden">
       {/* 1. NỀN TOÀN MÀN HÌNH */}
       <img 
-        src="public/" 
+        src="/public/images/ui/gameplay.png" 
         className="absolute inset-0 w-full h-full object-fill z-0" 
         alt="background"
       />
@@ -73,10 +73,10 @@ export default function GameplayScreen({
       <div className="flex-1 w-full max-w-7xl flex flex-col lg:flex-row items-center justify-center gap-12 px-8 z-10">
         
         {/* KHU VỰC BÁT (TRÁI) */}
-        <div className="flex flex-col items-center justify-center flex-1 relative mt-20">
+        <div className="flex flex-col items-center justify-center flex-1 relative mt-16 bp-[2vh]">
           <div className="relative transform scale-[2.2] transition-all duration-500">
              {/* KỆ ĐĨA TĨNH */}
-             <div className="absolute bottom-[-8px] left-1/2 -translate-x-1/2 w-32 h-4 bg-black/20 rounded-[50%] blur-sm z-0" />
+             <div className="absolute bottom-[-px] left-1/2 -translate-x-1/2 w-30 h-4 bg-black/20 rounded-[50%] blur-sm z-5" />
              
              <div className="relative z-10">
                 <CeramicBowl key={bowlKey} ingredients={selected} glowing={canSubmit} />

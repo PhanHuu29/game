@@ -106,7 +106,7 @@ export default function EndScreen({ onRestart, playVictory }: Props) {
         <button className="btn-clay" onClick={onRestart}>
           🔄 Chơi Lại
         </button>
-        <button className="btn-primary">
+        <button className="btn-primary" onClick={() => window.open('https://battrangweb.netlify.app', '_blank')}>
           🌐 Khám Phá Tiếp
         </button>
       </div>

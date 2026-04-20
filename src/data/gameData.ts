@@ -6,9 +6,9 @@ import type { Dish, ImagePaths } from '../types'
 export const IMAGE_PATHS: ImagePaths = {
   dishes: {
     'Canh măng mực': '/public/images/dishes/CANH MANG MUC.png',
-    'Su hào xào mực': '/public/images/dishes/Su hào xào mực.png', 
-    'Chả tôm lá lốt': '/public/images/dishes/Chả tôm lá lốt.png',
-    'Nem chim câu': '/public/images/dishes/Nem chim câu.png', 
+    'Su hào xào mực': '/public/images/dishes/BẮT TAY VÀO NẤU (25).png', 
+    'Chả tôm lá lốt': '/public/images/dishes/BẮT TAY VÀO NẤU (26).png',
+    'Nem chim câu': '/public/images/dishes/BẮT TAY VÀO NẤU (28).png', 
     'Gà luộc': '/public/images/dishes/ga luoc.png', 
     'Xôi vò chè đường': '/public/images/dishes/xoi vo che duong.png',
   },
@@ -34,13 +34,13 @@ export const IMAGE_PATHS: ImagePaths = {
   },
   icons: {
     'Canh măng mực': '/public/images/dishes/CANH MANG MUC.png',
-    'Su hào xào mực': '/public/images/dishes/Su hào xào mực.png', 
-    'Chả tôm lá lốt': '/public/images/dishes/Chả tôm lá lốt.png',
-    'Nem chim câu': '/public/images/dishes/Nem chim câu.png', 
+    'Su hào xào mực': '/public/images/dishes/BẮT TAY VÀO NẤU (25).png', 
+    'Chả tôm lá lốt': '/public/images/dishes/BẮT TAY VÀO NẤU (26).png',
+    'Nem chim câu': '/public/images/dishes/BẮT TAY VÀO NẤU (28).png', 
     'Gà luộc': '/public/images/dishes/ga luoc.png', 
     'Xôi vò chè đường': '/public/images/dishes/xoi vo che duong.png',
   },
-  ceramicBowl: '/public/images/DIA.png',
+  ceramicBowl: '',
 }
 
 // ═══════════════════════════════════════════════════════════════
