@@ -14,7 +14,7 @@ export default function InstructionScreen({ onStart }: Props) {
     <div className="screen gap-7 px-6">
       {/* 1. ẢNH NỀN TOÀN MÀN HÌNH */}
       <img
-        src="/public/images/ui/mission.png"        
+        src="/public/images/ui/mission.png"
         className="absolute inset-0 w-full h-full object-fill z-0"
         alt="background"
       />
@@ -29,7 +29,7 @@ export default function InstructionScreen({ onStart }: Props) {
 
         {/* 1. ẢNH TẤM BẢNG (LÀM NỀN) */}
         <img
-          src="/public/images/ui/ nhiệm vụ.png"
+          src="/public/images/ui/mission_back.png"
           className="absolute inset-0 w-full h-full object-fill z-0 items-center justify-center"
           alt="board-ui"
         />
@@ -38,7 +38,13 @@ export default function InstructionScreen({ onStart }: Props) {
         <div className="relative z-10 text-center flex flex-col items-center justify-center w-full h-full">
 
           {/* Icon cái hũ */}
-          <div className="text-6xl mb-6 leading-none animate-float drop-shadow-[0_12px_6px_rgba(0,0,0,0.4)]">🏺</div>
+          <div className="mb-6 animate-float">
+            <img
+              src="/public/images/ui/icon.png"
+              alt="Potion"
+              className="w-24 h-24 mx-auto drop-shadow-[0_12px_6px_rgba(0,0,0,0.4)]"
+            />
+          </div>
 
           {/* Dòng text 1 - Đã bỏ absolute để nằm trong luồng Flex */}
           <p className="font-body text-[17px] md:text-[18px] leading-[1.7] text-ink max-w-[80%]">
@@ -69,7 +75,7 @@ export default function InstructionScreen({ onStart }: Props) {
         </div>
 
         <img
-          src="/public/images/nút bắt đầu.png"
+          src="/public/images/ui/start_button.png"
           alt="Bắt đầu"
           className="
             w-[85vw] md:w-[480px] h-auto object-contain z-10

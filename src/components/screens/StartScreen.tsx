@@ -61,7 +61,7 @@ export default function StartScreen({ onStart }: Props) {
         </div>
 
         <img 
-          src="/public/images/nút bắt đầu.png" 
+          src="/public/images/ui/start_button.png" 
           alt="Bắt đầu" 
           className="
             w-[85vw] md:w-[480px] h-auto object-contain z-10
