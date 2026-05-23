@@ -23,12 +23,12 @@ function makeAudio(src: string, loop = false, vol = 1): HTMLAudioElement {
 
 export function useSound() {
   // ─── ĐỊNH NGHĨA LINK NHẠC TẠI ĐÂY ───
-  const link_nhac_nen = '/public/sounds/nhac-nen.mp3'; // <-- Dán link nhạc nền .mp3 vào đây
-  const link_chon_mon = '/public/sounds/nhac-bo-chon.mp3'; // <-- Dán link tiếng click vào đây
-  const link_bo_chon  = '/public/sounds/nhac-bo-chon.mp3'; // <-- Dán link tiếng bỏ chọn vào đây
+  const link_nhac_nen = './sounds/nhac-nen.mp3'; // <-- Dán link nhạc nền .mp3 vào đây
+  const link_chon_mon = './sounds/nhac_bo_chon.mp3'; // <-- Dán link tiếng click vào đây
+  const link_bo_chon  = './sounds/nhac_chon_mon.mp3'; // <-- Dán link tiếng bỏ chọn vào đây
   const link_dung_roi = ''; // <-- Dán link tiếng success vào đây
   const link_sai_roi  = ''; // <-- Dán link tiếng wrong vào đây
-  const link_chien_thang = '/public/sounds/nhacchienthang.mp3'; // <-- Dán link nhạc victory vào đây
+  const link_chien_thang = './sounds/nhacchienthang.mp3'; // <-- Dán link nhạc victory vào đây
 
   const ctxRef   = useRef<AudioContext | null>(null)
   const bgGain   = useRef<GainNode | null>(null)
