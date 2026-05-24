@@ -68,7 +68,7 @@ export default function InstructionScreen({ onStart }: Props) {
 
       <button
         onClick={onStart}
-        className="relative group outline-none z-10 transition-all items-center duration-300 active:scale-95 [perspective:1000px]"
+        className="relative group outline-none z-10 transition-all items-center duration-300 active:scale-95 [perspective:1000px] -translate-y-12"
       >
         <div className="absolute inset-0 overflow-hidden rounded-full pointer-events-none z-20">
           <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/40 to-transparent -translate-x-full group-hover:animate-shine" />

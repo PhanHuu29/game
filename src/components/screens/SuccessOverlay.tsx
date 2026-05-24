@@ -12,6 +12,7 @@ interface Props {
 
 export default function SuccessOverlay({ dish, onContinue, playSizzle, playSuccess }: Props) {
   const [phase, setPhase] = useState<SuccessPhase>(0)
+  const [smokeKey, setSmokeKey] = useState(0)
   const calledRef = useRef(false)
 
   useEffect(() => {
@@ -31,6 +32,13 @@ export default function SuccessOverlay({ dish, onContinue, playSizzle, playSucce
       clearTimeout(t1); clearTimeout(t2); clearTimeout(t3); clearTimeout(tSuccess)
     }
   }, [playSizzle, playSuccess])
+
+  useEffect(() => {
+    const smokeInterval = setInterval(() => {
+      setSmokeKey(k => k + 1)
+    }, 2500)
+    return () => clearInterval(smokeInterval)
+  }, [])
 
   const dishImgSrc = IMAGE_PATHS.dishes[dish.name] ?? null
 
@@ -57,12 +65,18 @@ export default function SuccessOverlay({ dish, onContinue, playSizzle, playSucce
         </div>
       )}
 
-      {/* ── 2. KHỐI MÓN ĂN & TÊN MÓN - CĂN GIỮA CHÍNH DIỆN ── */}
+      {/* ── 2. KHỐI MÓN ĂN & TÊN MÓN ── */}
       {phase >= 2 && (
-        <div 
-          className="relative z-20 flex flex-col items-center justify-center text-center pointer-events-none"
+        <div
+          className="flex flex-col items-center justify-center text-center pointer-events-none"
           style={{
+            position: 'absolute',
+            left: phase >= 3 ? '50%' : '50%',
+            top: phase >= 3 ? '45%' : '50%',
+            transform: 'translate(-50%, -50%)',
+            transition: 'left 0.6s cubic-bezier(0.34,1.15,0.64,1), top 0.6s cubic-bezier(0.34,1.15,0.64,1)',
             animation: 'dishReveal 0.8s cubic-bezier(0.34,1.15,0.64,1) both',
+            zIndex: 20,
           }}
         >
           {/* Hiệu ứng tia sáng lấp lánh quay quanh tâm */}
@@ -95,8 +109,17 @@ export default function SuccessOverlay({ dish, onContinue, playSizzle, playSucce
                 {dish.emoji}
               </span>
             )}
-            
-            {/* Làn khói nhẹ bay trực tiếp trên món ăn */}
+
+            {/* Khói liên tục bay trên món ăn */}
+            <div className="absolute inset-0 pointer-events-none" style={{ top: '-120px', opacity: 0.4 }}>
+              <SmokeEffect
+                key={smokeKey}
+                originX={140}
+                originY={150}
+                count={12}
+                className="absolute inset-0"
+              />
+            </div>
           </div>
 
           {/* Tên món ăn dưới ảnh */}
@@ -109,7 +132,7 @@ export default function SuccessOverlay({ dish, onContinue, playSizzle, playSucce
         </div>
       )}
 
-      {/* ── 3. BẢNG THÔNG TIN MÓN (CÓ KHUNG NGUYÊN LIỆU MỚI) ── */}
+      {/* ── 3. BẢNG THÔNG TIN MÓN ── */}
       {phase >= 3 && (
         <div
           className="ceramic-panel absolute shadow-overlay"
@@ -159,7 +182,7 @@ export default function SuccessOverlay({ dish, onContinue, playSizzle, playSucce
               const src = IMAGE_PATHS.ingredients[ing] ?? null
               return (
                 <div key={ing} className="flex flex-col items-center gap-1 group">
-                  <div 
+                  <div
                     className="w-12 h-12 rounded-full flex items-center justify-center p-1.5 transition-transform group-hover:scale-110 shadow-sm"
                     style={{
                       background: 'linear-gradient(135deg, #f0f7fd 0%, #e2f2fc 100%)',
@@ -180,8 +203,8 @@ export default function SuccessOverlay({ dish, onContinue, playSizzle, playSucce
             })}
           </div>
 
-          <button 
-            className="btn-gold w-full text-[15px] font-bold py-3 shadow-lg active:scale-95 transition-transform" 
+          <button
+            className="btn-gold w-full text-[15px] font-bold py-3 shadow-lg active:scale-95 transition-transform"
             onClick={onContinue}
           >
             Tiếp tục &nbsp;→
