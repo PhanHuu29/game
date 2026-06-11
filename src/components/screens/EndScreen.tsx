@@ -106,7 +106,7 @@ export default function EndScreen({ onRestart, playVictory }: Props) {
         <button className="btn-clay" onClick={onRestart}>
           🔄 Chơi Lại
         </button>
-        <button className="btn-primary" onClick={() => window.open('https://webbattrang-baochituyentruyen.netlify.app/?fbclid=IwZXh0bgNhZW0CMTAAYnJpZBExSDI2TncxSjBOUWFpNE1HWXNydGMGYXBwX2lkEDIyMjAzOTE3ODgyMDA4OTIAAR6d5IxGrswaQTA2_S0yA0Omo9NV-ZxgMRPeuCDhB9dL9JyM6GIUfRH8aVGGcQ_aem_rX5uhp5ao5rEGD6l_7x1Og', '_blank')}>
+        <button className="btn-primary" onClick={() => window.open('https://battrangweb-frombaochitruyenthong.netlify.app', '_blank')}>
           🌐 Khám Phá Tiếp
         </button>
       </div>
